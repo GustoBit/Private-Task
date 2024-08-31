@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleGuide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1400px', 'max': '2560px' },
+
+                    'xl': { 'min': '836px', 'max': '1440px' },
+
+                    'lgx': { 'min': '836px', 'max': '1024px' },
+
+                    'lg': { 'min': '768px', 'max': '836px' },
+
+                    'md': { 'min': '500px', 'max': '768px' },
+
+                    'sm': { 'min': '300px', 'max': '500px' },
+
+                },
+                extend: {
+                    colors: {
+                        oxfordblue: '#231656',
+                        whisper: '#F5F5F5',
+                        peach: '#FFC173 ',
+                        lightgray: '#C4C4C4',
+                        darkgray: '#4E4E4E',
+                        shadegray: '#F8F8F8',
+                        indigo: '#3D3269',
+                        ligtIndigo: '#7D5FFF',
+                        electricblue: '#625FFB',
+                        lightgreen: '#2FCF3F',
+                        mediumpurple: '#8A6FFD',
+                        cgray: '#D7D7D7',
+                        lightGray: '#B5B5B5',
+                        clight: '#F2F2F2',
+                        cgreen: '#38CC47',
+                        cblack: '#303030',
+                        blackGray: '#8C8C8C',
+                        cpeach: '#FFB545',
+                        cpurple: '#5B32FF',
+                        lightblack: '#141414',
+                        lightpurple: '#6C69FF',
+                        clightgray: '#F3F3F3',
+                        lightPurple: '#E5DFF4',
+                        cPurple: '#7544FF',
+                        cpink: '#FCD7FF',
+                        darkpink: '#FF6CD3',
+                        cyellow: '#F9E2C0',
+                        darkyellow: '#F9B867',
+                        cGray: '#EBEBEB',
+                        line: '#CCCCCC',
+                        border: '#686868',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+        <div class="flex justify-between items-center mt-10 xl:mt-5 md:mt-[10px]">
+            <a href="./index.html"
+                class="flex items-end gap-2 jost-regular text-[30px] leading-[130%] text-oxfordblue md:items-center lg:items-center">
+                <img src="./img/nav_logo.svg" alt="">
+                PrimePay.
+            </a>
+            <div class="flex gap-[197px] items-center xl:gap-[100px] lg:hidden md:hidden sm:hidden">
+                <div class="flex items-center gap-5 inter-bold text-lg leading-[160%] xl:text-[16px]">
+                    <a href="./licenses.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        About Us
+                    </a>
+                    <a href="./blogSingle.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Features
+                    </a>
+                    <a href="./n404.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Pricing
+                    </a>
+                    <a href="./blog.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Blog
+                    </a>
+                </div>
+                <button
+                    class="uppercase inter-regular leading-[160%] text-white py-5 px-[42px] bg-oxfordblue rounded-[72px] xl:py-[15px] xl:px-[30px] xl:text-[14px] hover:bg-peach transition-bg duration-300">login</button>
+            </div>
+            <div class="hidden lg:block md:block sm:block">
+                <button
+                    class="after:content-[''] after:w-[25px] after:h-[4px] after:bg-oxfordblue after:block after:rounded-[16px] 
+                before:content-[''] before:w-[25px] before:h-[4px] before:bg-oxfordblue before:block before:rounded-[16px] flex flex-col gap-[5px]">
+                    <span class="w-[25px] h-[4px] bg-peach rounded-[16px]"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- NAV END -->
+    <!-- HERO -->
+    <div
+        class="bg-[url('./img/background.jpg')] bg-cover bg-no-repeat bg-center rounded-[40px] w-[1744px] h-[1029px] mx-auto xl:w-full lgx:w-full lg:w-full md:w-full sm:w-full">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+
+            <section
+                class="relative pt-[129px] mt-[40px] xl:pt-[70px] lgx:pt-[50px] lg:pt-[40px] md:pt-[20px] sm:pt-[10px] xl:mt-[30px] lgx:mt-[25px] lg:mt-[25px] md:mt-[20px] sm:mt-[15px]">
+                <div class="flex flex-col gap-[33px] text-oxfordblue px-[302px] items-center text-center xl:px-[200px] xl:gap-[25px] lgx:px-[120px] lgx:gap-[20px] lg:px-[100px] lg:gap-[18px]
+                md:px-[70px] md:gap-[15px]
+                sm:px-[20px] sm:gap-[10px]">
+                    <span
+                        class="jost-semibold text-[80px] leading-[115%] xl:text-[60px] lgx:text-[50px] lg:text-[40px] md:text-[30px] sm:text-[18px]">
+                        Ready To Launch Your
+                        Online <span class="text-white">Payment</span> App
+                    </span>
+                    <span
+                        class="open-semibold text-[25px] leading-[160%] xl:text-[22px] lgx:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
+                        A simple yet modern solution to showcase your app
+                    </span>
+                    <button class="uppercase py-[25px] px-[48px] bg-oxfordblue text-white inter-semibold text-lg leading-[160%] rounded-[72px] hover:bg-peach transition-bg duration-300
+                        xl:py-[18px] lgx:py-[16px] lg:py-[14px] lg:text-[16px]
+                        md:text-[16px] md:py-[12px] sm:text-[12px] sm:py-[8px] sm:px-[25px]">
+                        get started
+                    </button>
+                </div>
+                <span class="absolute top-[541px] left-[144px] xl:top-[40%] xl:left-[1%] 
+                lgx:top-[40%] lgx:left-[1%] lgx:size-[200px] 
+                lg:top-[30%] lg:left-[1%] lg:size-[160px] 
+                md:top-[40%] md:left-[1%] md:size-[60px] 
+                sm:hidden">
+                    <img src="././img/cash.svg" alt="">
+                </span>
+                <span class="absolute top-[738px] right-[143px] xl:top-[55%] xl:right-[1%] 
+                lgx:top-[55%] lgx:right-[1%] lgx:size-[200px] 
+                lg:top-[65%] lg:right-[1%] lg:size-[160px] 
+                md:top-[75%] md:right-[1%] md:size-[60px] 
+                sm:hidden">
+                    <img src="./img/card.svg" alt="">
+                </span>
+                <div class="absolute top-[549px] right-[474px] mx-auto bg-[url('./img/phone.svg')] bg-cover bg-no-repeat bg-center 
+                    xl:static xl:w-fit lgx:static lgx:w-fit 
+                    lg:static lg:w-fit md:static md:w-fit 
+                    sm:static sm:w-fit">
+                    <div class="pt-[80px] px-[60px] pb-[73px]
+                    sm:pt-[60px] sm:px-[40px] sm:w-full wiggle">
+                        <span class="flex items-center justify-between mb-[37px]">
+                            <span class="flex items-center gap-[14px]">
+                                <a href="#" class="overflow-hidden rounded-[11px]">
+                                    <img src="./img/john.svg" alt="">
+                                </a>
+                                <span class="flex flex-col gap-[20px] text-[16px] leading-[21%]">
+                                    <p class="archivo-semibold text-cpurple">Hi, John!</p>
+                                    <p class="archivo-medium text-lightblack">Welcome Back</p>
+                                </span>
+                            </span>
+                            <button class=""><img src="./img/notify.svg" alt=""></button>
+                        </span>
+                        <span class="flex items-center justify-between mb-[18px]">
+                            <span class="flex flex-col gap-[20px] text-lightblack leading-[23%]">
+                                <p class="archivo-medium text-[13px]">Account Balance</p>
+                                <p class="archivo-semibold text-[18px]">$5345.90</p>
+                            </span>
+                            <button
+                                class="bg-lightpurple archivo-semibold text-[14px] text-white rounded-[12px] p-[10px] hover:bg-peach transition-bg duration-300">Add
+                                Card</button>
+                        </span>
+                        <button class="mb-[25px] hover:scale-[1.02] transaction duration-300">
+                            <img src="./img/credit.svg" alt="">
+                        </button>
+                        <span class="grid grid-cols-2 gap-[6px] w-full block mb-[23px]">
+                            <button
+                                class="bg-clightgray rounded-[16px] w-[160px] h-[92px] flex flex-col gap-[10px] justify-center archivo-medium text-[12px] leading-[18%] text-lightblack items-center hover:bg-white group sm:w-full">
+                                <span
+                                    class="size-[37px] bg-lightblack rounded-full flex items-center justify-center group-hover:bg-lightpurple transition-bg duration-300">
+                                    <img src="./img/tg.svg" alt="" class="pr-[2px]">
+                                </span>
+                                <span class="block">Send / Receive</span>
+                            </button>
+                            <button
+                                class="bg-clightgray rounded-[16px] w-[160px] h-[92px] flex flex-col gap-[10px] justify-center archivo-medium text-[12px] leading-[18%] text-lightblack items-center hover:bg-white group sm:w-full">
+                                <span
+                                    class="size-[37px] bg-lightblack rounded-full flex items-center justify-center group-hover:bg-lightpurple transition-bg duration-300">
+                                    <img src="./img/topDown.svg" alt="">
+                                </span>
+                                <span class="block">Transfer Money</span>
+                            </button>
+                            <button
+                                class="bg-clightgray rounded-[16px] w-[160px] h-[92px] flex flex-col gap-[10px] justify-center archivo-medium text-[12px] leading-[18%] text-lightblack items-center hover:bg-white group sm:w-full">
+                                <span
+                                    class="size-[37px] bg-lightblack rounded-full flex items-center justify-center group-hover:bg-lightpurple transition-bg duration-300">
+                                    <img src="./img/text.svg" alt="" class="pr-[1px] pb-[2px]">
+                                </span>
+                                <span class="block">Recharge & Bills</span>
+                            </button>
+                            <button
+                                class="bg-clightgray rounded-[16px] w-[160px] h-[92px] flex flex-col gap-[10px] justify-center archivo-medium text-[12px] leading-[18%] text-lightblack items-center hover:bg-white group sm:w-full">
+                                <span
+                                    class="size-[37px] bg-lightblack rounded-full flex items-center justify-center group-hover:bg-lightpurple transition-bg duration-300">
+                                    <img src="./img/percent.svg" alt="" class="pr-[1px] pb-[2px]">
+                                </span>
+                                <span class="block">Voucher & Rewards</span>
+                            </button>
+                        </span>
+                        <span class="block sm:w-full"><img src="./img/seeAll.svg" alt=""></span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- HERO END -->
+    <!-- NEXT START -->
+    <div class="w-[1747px] h-[914px] bg-whisper rounded-[30px] mx-auto mt-[77px] pt-[496px] pb-[162px] 
+    xl:w-full xl:mt-[50px] xl:pt-[380px] xl:h-fit xl:pb-[40px] 
+    lgx:w-full lgx:mt-[40px] lgx:pt-[200px] lgx:h-fit lgx:pb-[30px] 
+    lg:w-full lg:mt-[30px] lg:pt-[180px] lg:h-fit lg:pb-[30px] 
+    md:w-full md:mt-[20px] md:pt-[40px] md:h-fit md:pb-[30px] 
+    sm:w-full sm:mt-[10px] sm:pt-[20px] sm:h-fit sm:pb-[20px]">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+
+            <section class="relative">
+                <div class="absolute -top-[400px] left-[292px] rotate-[19deg] 
+                xl:-top-[300px] xl:left-[10%] 
+                lgx:-top-[50%] lgx:left-[5%] lgx:size-[100px] 
+                lg:top-[65%] lg:left-[70%] lg:size-[146px] 
+                md:top-[65%] md:left-[70%] md:size-[100px] sm:hidden">
+                    <img src="./img/message.svg" alt="">
+                </div>
+                <div class="absolute right-[307px] -top-[250px] 
+                xl:-top-[200px] xl:right-[10%] 
+                lgx:-top-[40%] lgx:right-[5%] lgx:size-[80px] 
+                lg:-top-[20%] lg:right-[1%] lg:size-[60px] 
+                md:hidden sm:hidden">
+                    <img src="./img/icons.svg" alt="">
+                </div>
+                <div
+                    class="grid grid-cols-3 gap-[55px] xl:gap-[30px] lgx:gap-[20px] lg:grid-cols-2 md:grid-cols-2 md:gap-[10px] sm:grid-cols-1 sm:gap-[10px] sm:px-[30px]">
+
+                    <a href="#" class="flex flex-col gap-[32px] items-center p-[10px] rounded-3xl hover:bg-lightGray/50 transition-bg duration-300 group/item xl:h-fit lgx:h-fit lg:h-fit md:h-fit sm:h-fit 
+                        sm:gap-[10px]">
+                        <span class="relative block">
+                            <img src="./img/manAccount.svg" alt=""
+                                class="group-hover/item:brightness-0 group-hover/item:invert">
+                            <button
+                                class="absolute size-[45px] rounded-full flex items-center justify-center bg-lightPurple -top-[11px] -right-[45px] hover:bg-cPurple group transition-bg duration-300">
+                                <img src="./img/plus.svg" alt="" class="group-hover:brightness-0 group-hover:invert">
+                            </button>
+                        </span>
+                        <span class="space-y-[7px] text-center sm:space-y-[5px]">
+                            <span
+                                class="jost-medium text-[30px] leading-[133%] text-oxfordblue block sm:text-[25px]">Creat
+                                an
+                                account</span>
+                            <span
+                                class="open-regular text-[20px] leading-[160%] text-darkgray block group-hover/item:text-white sm:text-[16px]">
+                                Aspernatur sit adipisci quaerat unde Redug Lagre dolor sit amets consectetus. Agencies
+                                define their new business
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[32px] items-center p-[10px] rounded-3xl hover:bg-lightGray/50 transition-bg duration-300 group/item xl:h-fit lgx:h-fit lg:h-fit md:h-fit sm:h-fit 
+                        sm:gap-[10px]">
+                        <span class="relative block">
+                            <img src="./img/home.svg" alt=""
+                                class="group-hover/item:brightness-0 group-hover/item:invert">
+                            <button
+                                class="absolute size-[45px] rounded-full flex items-center justify-center bg-cpink -top-[11px] -right-[45px] hover:bg-darkpink group transition-bg duration-300">
+                                <img src="./img/women.svg" alt="" class="group-hover:brightness-0 group-hover:invert">
+                            </button>
+                        </span>
+                        <span class="space-y-[7px] text-center sm:space-y-[5px]">
+                            <span class="jost-medium text-[30px] leading-[133%] text-oxfordblue block sm:text-[25px]">
+                                Attach bank accounts
+                            </span>
+                            <span
+                                class="open-regular text-[20px] leading-[160%] text-darkgray block group-hover/item:text-white sm:text-[16px]">
+                                Aspernatur sit adipisci quaerat unde Redug Lagre dolor sit amets consectetus. Agencies
+                                define their new business
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[32px] items-center p-[10px] rounded-3xl hover:bg-lightGray/50 transition-bg duration-300 group/item xl:h-fit lgx:h-fit lg:h-fit md:h-fit sm:h-fit 
+                        sm:gap-[10px]">
+                        <span class="relative block">
+                            <img src="./img/cashBank.svg" alt=""
+                                class="group-hover/item:brightness-0 group-hover/item:invert">
+                            <button
+                                class="absolute size-[45px] rounded-full flex items-center justify-center bg-cyellow -top-[11px] -right-[62px] hover:bg-darkyellow group transition-bg duration-300">
+                                <img src="./img/$.svg" alt="" class="group-hover:brightness-0 group-hover:invert">
+                            </button>
+                        </span>
+                        <span class="space-y-[7px] text-center sm:space-y-[5px]">
+                            <span class="jost-medium text-[30px] leading-[133%] text-oxfordblue block sm:text-[25px]">
+                                Send money
+                            </span>
+                            <span
+                                class="open-regular text-[20px] leading-[160%] text-darkgray block group-hover/item:text-white sm:text-[16px]">
+                                Aspernatur sit adipisci quaerat unde Redug Lagre dolor sit amets consectetus. Agencies
+                                define their new business
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- NEXT END -->
+    <!-- CONTENT START -->
+    <div class="mt-[150px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[30px] w-full">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+
+            <section class="flex flex-col gap-[275px] 
+            xl:gap-[100px] lgx:gap-[60px] lg:gap-[40px] md:gap-[30px] sm:gap-[30px]">
+
+                <div class="flex flex-col gap-[71px] 
+                xl:gap-[50px] lgx:gap-[40px] lg:gap-[50px] md:gap-[30px] sm:gap-[30px]">
+
+                    <div class="grid grid-cols-[570px_auto] gap-[127px] 
+                    xl:grid-cols-2 xl:gap-[40px] 
+                    lgx:grid-cols-2 lgx:gap-[30px] 
+                    lg:grid-cols-2 lg:gap-[20px] 
+                    md:grid-cols-1 md:gap-[30px] 
+                    sm:grid-cols-1 sm:gap-[20px]">
+
+                        <div class="space-y-[40px] 
+                        xl:space-y-[30px] 
+                        lgx:space-y-[20px] 
+                        lg:space-y-[20px] 
+                        md:space-y-[15px] md:flex md:flex-col md:items-center 
+                        sm:space-y-[10px] sm:flex sm:flex-col sm:items-center">
+                            <div class="md:text-center sm:text-center">
+                                <span class="jost-semibold text-[55px] leading-[100%] text-lightGray mb-[30px] block 
+                                xl:text-[50px] 
+                                lgx:text-[45px] lgx:mb-[20px] 
+                                lg:text-[40px] lg:mb-[15px] 
+                                md:text-[40px] md:mb-[15px] 
+                                sm:text-[25px] sm:mb-[10px]">
+                                    Send and receive <span class="text-oxfordblue">payments</span> easily
+                                </span>
+                                <ul class="list-none flex flex-col gap-[15px] open-regular text-[20px] leading-[160%] text-darkgray 
+                                    lgx:text-[18px] 
+                                    lg:text-[16px] lg:gap-[10px] 
+                                    md:text-[16px] md:gap-[10px] 
+                                    sm:text-[14px] sm:gap-[10px]">
+                                    <li>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt
+                                    </li>
+                                    <li>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna
+                                        aliqua.
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="block w-full h-[1px] bg-lightgray"></span>
+                            <a href="#" class="flex items-center gap-[21px] py-[5px] pl-[5px] pr-[20px] rounded-3xl hover:bg-clightgray w-fit transition-bg duration-300 
+                                lg:gap-[15px] 
+                                md:gap-[15px] 
+                                sm:gap-[10px]">
+                                <button class="size-[100px] rounded-full flex items-center justify-center bg-peach 
+                                xl:size-[80px] 
+                                lgx:size-[70px] 
+                                lg:size-[60px] 
+                                md:size-[60px] 
+                                sm:size-[50px]">
+                                    <img src="./img/play.svg" alt="" class="md:size-[20px] sm:size-[15px]">
+                                </button>
+                                <span class="flex flex-col gap-[5px] text-[20px] leading-[160%] 
+                                lgx:text-[18px] 
+                                lg:text-[16px] 
+                                md:text-[16px] 
+                                sm:text-[14px]">
+                                    <span class="block text-oxfordblue open-bold">
+                                        Lorem ipsum dolor sit
+                                    </span>
+                                    <span class="flex items-center gap-[15px] open-regular text-mediumpurple">
+                                        <span class="block">amet, consectetur</span>
+                                        <span class="block"><img src="./img/right.svg" alt=""></span>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div
+                            class="rounded-[18px] bg-whisper p-[20px] hidden md:flex sm:flex items-center justify-center w-full sm:p-[10px] padding">
+                            <div class="flex gap-[30px] sm:gap-[15px]">
+                                <span class="flex flex-col gap-[1px]">
+                                    <span
+                                        class="block jost-semibold text-[20px] leading-[100%] text-oxfordblue sm:text-[16px]">
+                                        12.000 +
+                                    </span>
+                                    <span class="block open-regular text-[14px] leading-[160%] text-darkgray">
+                                        Downloaded
+                                    </span>
+                                </span>
+                                <span class="h-auto w-[1px] bg-lightGray block"></span>
+                                <span class="flex flex-col gap-[1px]">
+                                    <span
+                                        class="block jost-semibold text-[20px] leading-[100%] text-oxfordblue sm:text-[16px]">
+                                        $10 M
+                                    </span>
+                                    <span class="block open-regular text-[14px] leading-[160%] text-darkgray">
+                                        Transactions
+                                    </span>
+                                </span>
+                                <span class="h-auto w-[1px] bg-lightGray block"></span>
+                                <span class="flex flex-col gap-[1px]">
+                                    <span
+                                        class="block jost-semibold text-[20px] leading-[100%] text-oxfordblue sm:text-[16px]">
+                                        1.000 +
+                                    </span>
+                                    <span class="block open-regular text-[14px] leading-[160%] text-darkgray">
+                                        Feedback
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="relative md:w-full sm:w-full">
+                            <span class="rounded-[40px] overflow-hidden block 
+                            lg:hidden md:hidden sm:hidden">
+                                <img src="./img/walletBackground.jpg" alt="">
+                            </span>
+                            <span class="absolute top-[95px] left-0 right-0 mx-auto w-fit h-fit block 
+                            xl:top-[20px] xl:size-[350px] 
+                            lgx:top-0 lgx:size-[300px] 
+                            lg:top-0 lg:size-[260px] 
+                            md:static md:top-0 md:w-fit md:h-fit
+                            sm:static sm:top-0 sm:w-fit sm:h-fit">
+                                <img src="./img/walletPhone.svg" alt="">
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="rounded-[30px] bg-whisper pl-[66px] pr-[650px] py-[91px] 
+                    xl:py-[60px] xl:pr-0 
+                    lgx:py-[50px] lgx:pr-0 
+                    lg:py-[40px] lg:pr-0 lg:pl-[30px] 
+                    md:hidden sm:hidden">
+                        <div class="flex gap-[60px] 
+                        xl:gap-[30px] 
+                        lgx:gap-[20px] 
+                        lg:gap-[20px]">
+                            <span class="flex flex-col gap-[1px]">
+                                <span class="block jost-semibold text-[40px] leading-[100%] text-oxfordblue 
+                                xl:text-[30px] 
+                                lgx:text-[25px] 
+                                lg:text-[20px]">
+                                    12.000 +
+                                </span>
+                                <span class="block open-regular text-[20px] leading-[160%] text-darkgray 
+                                xl:text-lg 
+                                lgx:text-[16px] 
+                                lg:text-[14px]">
+                                    Downloaded
+                                </span>
+                            </span>
+                            <span class="h-auto w-[1px] bg-lightGray block"></span>
+                            <span class="flex flex-col gap-[1px]">
+                                <span class="block jost-semibold text-[40px] leading-[100%] text-oxfordblue 
+                                xl:text-[30px] 
+                                lgx:text-[25px] 
+                                lg:text-[20px]">
+                                    $10 M
+                                </span>
+                                <span class="block open-regular text-[20px] leading-[160%] text-darkgray 
+                                xl:text-lg 
+                                lgx:text-[16px] 
+                                lg:text-[14px]">
+                                    Transactions
+                                </span>
+                            </span>
+                            <span class="h-auto w-[1px] bg-lightGray block"></span>
+                            <span class="flex flex-col gap-[1px]">
+                                <span class="block jost-semibold text-[40px] leading-[100%] text-oxfordblue 
+                                xl:text-[30px] 
+                                lgx:text-[25px] 
+                                lg:text-[20px]">
+                                    1.000 +
+                                </span>
+                                <span class="block open-regular text-[20px] leading-[160%] text-darkgray 
+                                xl:text-lg 
+                                lgx:text-[16px] 
+                                lg:text-[14px]">
+                                    Feedback
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w-full h-[1px] bg-lightgray"></div>
+            </section>
+
+            <section class="mt-[110px] flex flex-col gap-[40px] 
+            xl:mt-[60px] xl:gap-[30px] 
+            lgx:mt-[40px] lgx:gap-[25px] 
+            lg:mt-[40px] lg:gap-[40px] 
+            md:mt-[40px] md:gap-[40px] 
+            sm:mt-[30px] sm:gap-[30px]">
+                <div class="jost-semibold text-[55px] leading-[100%] text-lightGray text-center px-[337px] 
+                xl:text-[50px] xl:p-0 
+                lgx:text-[45px] lgx:p-0 
+                lg:text-[40px] lg:p-0 
+                md:text-[35px] md:p-0 
+                sm:text-[30px] sm:p-0">
+                    Why it is Worth Choosing
+                    <span class="text-oxfordblue">PrimePay.</span>
+                </div>
+                <div class="flex flex-col gap-[35px] 
+                xl:gap-[30px] 
+                lgx:gap-[30px] lgx:w-full 
+                lg:gap-[30px] lg:w-full 
+                md:gap-[30px] md:w-full 
+                sm:gap-[30px] sm:w-full">
+                    <div class="grid grid-cols-[auto_438px] gap-[42px] 
+                    xl:gap-[30px] 
+                    lgx:grid-cols-1 lgx:gap-[30px] 
+                    lg:grid-cols-1 lg:gap-[30px] 
+                    md:grid-cols-1 md:gap-[30px] 
+                    sm:grid-cols-1 sm:gap-[20px]">
+                        <div class="py-[62px] pr-[80px] pl-[69px] rounded-[30px] bg-shadegray items-center gap-[76px] grid grid-cols-[auto_315px] 
+                            xl:gap-[30px] xl:p-[50px] 
+                            lgx:gap-[30px] lgx:p-[50px] 
+                            lg:gap-[30px] lg:p-[40px] 
+                            md:gap-[30px] md:p-[30px] 
+                            sm:grid-cols-1 sm:gap-[40px] sm:p-[20px]">
+                            <span class="flex flex-col gap-[17px] 
+                            xl:gap-[15px]">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo sm:text-center sm:text-[25px]">
+                                    Integration other
+                                </span>
+                                <span
+                                    class="block open-regular text-[20px] leading-[160%] text-darkgray sm:text-[16px]">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit, sed do eiusmod tempor
+                                    incididunt Laoreet non curabitur gravida
+                                    sagittis aliquam bibendum.
+                                </span>
+                            </span>
+                            <span class="relative rounded-[30px] bg-cGray block h-[284px]">
+                                <button
+                                    class="absolute w-[79px] h-[76px] flex items-center justify-center bg-white rounded-full -top-[8.7px] left-[58px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/telegram.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[117px] flex items-center justify-center bg-white rounded-full -top-[41px] right-[8px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/slack.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[93px] flex items-center justify-center bg-white rounded-full top-[97px] -left-[12.9px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/imgae965.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[112px] flex items-center justify-center bg-white rounded-full top-[115px] right-[77px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/image962.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[76px] flex items-center justify-center bg-white rounded-full top-[115px] -right-[20px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/email.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[84px] flex items-center justify-center bg-white rounded-full -bottom-[9px] left-[48px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300 -rotate-[30deg]">
+                                    <img src="./img/drive.svg" alt="">
+                                </button>
+                                <button
+                                    class="absolute size-[76px] flex items-center justify-center bg-white rounded-full -bottom-[21px] -right-[1px] hover:bg-cGray hover:ring-1 hover:ring-white hover:ring-inset transition-bg duration-300">
+                                    <img src="./img/image964.svg" alt="">
+                                </button>
+                            </span>
+                        </div>
+                        <button class="py-[43px] px-[45px] flex flex-col gap-[28px] rounded-[30px] bg-shadegray transaction-bg duration-300 hover:bg-cblack/25 group 
+                            xl:p-[42px] xl:items-center 
+                            lgx:hidden 
+                            lg:hidden 
+                            md:hidden 
+                            sm:hidden">
+                            <span class="block rounded-[15px] overflow-hidden relative">
+                                <img src="./img/blueBack.jpg" alt="">
+                                <span class="absolute rotate-[165deg] top-[31px] left-[26px]">
+                                    <img src="./img/otpechatka.svg" alt="">
+                                </span>
+                                <span class="absolute top-0 right-0">
+                                    <img src="./img/bigOtpechatka.svg" alt=""
+                                        class="group-hover:brightness-0 group-hover:invert transaction duration-1000">
+                                </span>
+                            </span>
+                            <span class="block space-y-[15px] text-start">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo group-hover:text-white">
+                                    Safe & Security
+                                </span>
+                                <span
+                                    class="block text-darkgray text-[20px] open-regular leading-[160%] group-hover:text-white">
+                                    Easily integrate with all your need favorite tools through and APIsing including
+                                    automatic
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-[43px] 
+                    xl:gap-[30px] 
+                    lgx:grid-cols-2 lgx:gap-[25px] 
+                    lg:grid-cols-2 lg:gap-[20px] 
+                    md:grid-cols-2 md:gap-[20px] 
+                    sm:grid-cols-1 sm:gap-[30px] sm:px-[20px]">
+                        <button class="py-[43px] px-[45px] flex flex-col gap-[28px] rounded-[30px] bg-shadegray transaction-bg duration-300 hover:bg-cblack/25 group 
+                            xl:p-[42px] xl:items-center 
+                            lgx:p-[20px] lgx:gap-[25px] 
+                            lg:p-[15px] lg:gap-[20px] 
+                            md:p-[15px] md:gap-[20px] 
+                            sm:p-[20px] sm:gap-[15px]">
+                            <span
+                                class="block rounded-[15px] overflow-hidden relative lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <img src="./img/peachBack.jpg" alt="" class="lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <span
+                                    class="absolute top-[42px] left-[37px] lgx:top-[30%] lg:top-[30%] md:top-[30%] sm:top-[30%] custom">
+                                    <img src="./img/image2474.svg" alt="">
+                                </span>
+                                <span class="absolute top-0 right-[39px] sm:right-0 none">
+                                    <img src="./img/image2502.svg" alt=""
+                                        class="group-hover:brightness-0 group-hover:invert transaction duration-1000">
+                                </span>
+                            </span>
+                            <span
+                                class="block space-y-[15px] text-start lgx:space-y-[10px] lg:space-y-[10px] md:space-y-[10px] sm:space-y-[10px]">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo group-hover:text-white sm:text-[25px]">
+                                    Merchant account
+                                </span>
+                                <span
+                                    class="block text-darkgray text-[20px] open-regular leading-[160%] group-hover:text-white sm:text-[16px]">
+                                    Easily integrate with all your need favorite tools through and APIsing including
+                                    automatic
+                                </span>
+                            </span>
+                        </button>
+                        <button class="py-[43px] px-[45px] flex flex-col gap-[28px] rounded-[30px] bg-shadegray transaction-bg duration-300 hover:bg-cblack/25 group 
+                            xl:p-[42px] xl:items-center 
+                            lgx:p-[20px] lgx:gap-[25px] 
+                            lg:p-[15px] lg:gap-[20px] 
+                            md:p-[15px] md:gap-[20px] 
+                            sm:p-[20px] sm:gap-[15px]">
+                            <span
+                                class="block rounded-[15px] overflow-hidden relative lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <img src="./img/purpleBack.svg" alt="" class="lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <span
+                                    class="absolute top-[48px] left-[37px] lgx:top-[30%] lg:top-[30%] md:top-[30%] sm:top-[30%] custom">
+                                    <img src="./img/box.svg" alt="">
+                                </span>
+                                <span class="absolute top-0 right-0 none">
+                                    <img src="./img/bigBox.svg" alt=""
+                                        class="group-hover:brightness-0 group-hover:invert transaction duration-1000">
+                                </span>
+                            </span>
+                            <span
+                                class="block space-y-[15px] text-start lgx:space-y-[10px] lg:space-y-[10px] md:space-y-[10px] sm:space-y-[10px]">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo group-hover:text-white sm:text-[25px]">
+                                    Merchant account
+                                </span>
+                                <span
+                                    class="block text-darkgray text-[20px] open-regular leading-[160%] group-hover:text-white sm:text-[16px]">
+                                    Easily integrate with all your need favorite tools through and APIsing including
+                                    automatic
+                                </span>
+                            </span>
+                        </button>
+                        <button class="py-[43px] px-[45px] flex flex-col gap-[28px] rounded-[30px] bg-shadegray transaction-bg duration-300 hover:bg-cblack/25 group 
+                            xl:p-[42px] xl:items-center 
+                            lgx:p-[20px] lgx:gap-[25px] 
+                            lg:p-[15px] lg:gap-[20px] 
+                            md:p-[15px] md:gap-[20px] 
+                            sm:p-[20px] sm:gap-[15px]">
+                            <span
+                                class="block rounded-[15px] overflow-hidden relative lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <img src="./img/pinBack.svg" alt="" class="lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <span
+                                    class="absolute rotate-[165deg] top-[41px] left-[29px] lgx:top-[30%] lg:top-[30%] md:top-[30%] sm:top-[30%] custom">
+                                    <img src="./img/raketa.svg" alt="">
+                                </span>
+                                <span class="absolute top-0 right-0 none">
+                                    <img src="./img/bigRaketa.svg" alt=""
+                                        class="group-hover:brightness-0 group-hover:invert transaction duration-1000">
+                                </span>
+                            </span>
+                            <span
+                                class="block space-y-[15px] text-start lgx:space-y-[10px] lg:space-y-[10px] md:space-y-[10px] sm:space-y-[10px]">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo group-hover:text-white sm:text-[25px]">
+                                    Fast get paid
+                                </span>
+                                <span
+                                    class="block text-darkgray text-[20px] open-regular leading-[160%] group-hover:text-white sm:text-[16px]">
+                                    Easily integrate with all your need favorite tools through and APIsing including
+                                    automatic
+                                </span>
+                            </span>
+                        </button>
+                        <button class="py-[43px] px-[45px] flex flex-col gap-[28px] rounded-[30px] bg-shadegray transaction-bg duration-300 hover:bg-cblack/25 group 
+                            hidden lgx:flex 
+                            lgx:p-[20px] lgx:gap-[25px] 
+                            lg:p-[15px] lg:gap-[20px] lg:flex 
+                            md:p-[15px] md:gap-[20px] md:flex 
+                            sm:p-[20px] sm:gap-[15px] sm:flex">
+                            <span
+                                class="block rounded-[15px] overflow-hidden relative lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <img src="./img/blueBack.jpg" alt="" class="lgx:w-full lg:w-full md:w-full sm:w-full">
+                                <span
+                                    class="absolute rotate-[165deg] top-[31px] left-[26px] lgx:top-[30%] lg:top-[30%] md:top-[30%] sm:top-[30%] custom">
+                                    <img src="./img/otpechatka.svg" alt="">
+                                </span>
+                                <span class="absolute top-0 right-0 none">
+                                    <img src="./img/bigOtpechatka.svg" alt=""
+                                        class="group-hover:brightness-0 group-hover:invert transaction duration-1000">
+                                </span>
+                            </span>
+                            <span
+                                class="block space-y-[15px] text-start lgx:space-y-[10px] lg:space-y-[10px] md:space-y-[10px] sm:space-y-[10px]">
+                                <span
+                                    class="block jost-medium text-[35px] leading-[100%] text-indigo group-hover:text-white sm:text-[25px]">
+                                    Safe & Security
+                                </span>
+                                <span
+                                    class="block text-darkgray text-[20px] open-regular leading-[160%] group-hover:text-white sm:text-[16px]">
+                                    Easily integrate with all your need favorite tools through and APIsing including
+                                    automatic
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-[150px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[30px] 
+            bg-[url('./img/backgroundGoodbye.svg')] bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden flex flex-col gap-[40px] py-[158px] px-[190px] 
+            xl:gap-[40px] lgx:gap-[35px] lg:gap-[30px] md:gap-[30px] sm:gap-[20px] 
+            xl:py-[80px] xl:px-[190px] 
+            lgx:py-[60px] lgx:px-[80px] 
+            lg:py-[40px] lg:px-[60px] 
+            md:py-[30px] md:px-[40px] 
+            sm:p-[20px]">
+
+                <div class="jost-semibold leading-[100%] text-white text-center text-[55px] px-[147px] 
+                xl:text-[50px] xl:px-[147px] 
+                lgx:text-[45px] lgx:px-[80px] 
+                lg:text-[40px] lg:px-[40px] 
+                md:text-[38px] md:px-[30px] 
+                sm:text-[28px] sm:px-[10px]">
+                    “Say goodbye to clutter and
+                    <span class="text-indigo">bounce rates.</span>
+                </div>
+
+                <div class="grid grid-rows-3 gap-[32px] 
+                xl:gap-[28px] 
+                lgx:gap-[28px] 
+                lg:gap-[25px] 
+                md:gap-[25px] 
+                sm:gap-0">
+
+                    <div class="rounded-[30px] bg-white flex flex-col gap-[30px] py-[70px] px-[105px] 
+                    xl:gap-[28px] xl:p-[60px] 
+                    lgx:gap-[25px] lgx:p-[40px] 
+                    lg:gap-[20px] lg:p-[30px] 
+                    md:gap-[20px] md:p-[25px] 
+                    sm:gap-[15px] sm:p-[18px] sm:h-fit">
+                        <div class="flex items-center justify-between column">
+                            <span class="flex items-center gap-[20px] sm:gap-[10px]">
+                                <a href="#" class="size-[94px] rounded-full overflow-hidden hover:ring-[2px] ring-electricblue transaction duration-500 
+                                    lgx:size-[84px] 
+                                    lg:size-[74px] 
+                                    md:size-[70px] 
+                                    sm:size-[60px]">
+                                    <img src="./img/nattasha.svg" alt="">
+                                </a>
+                                <span class="flex flex-col gap-[5px]">
+                                    <span class="block jost-medium text-[35px] leading-[100%] text-indigo 
+                                        lgx:text-[30px] 
+                                        lg:text-[26px] 
+                                        md:text-[24px] 
+                                        sm:text-[20px]">Nattasha</span>
+                                    <span class="block open-regular text-[20px] leading-[160%] text-electricblue 
+                                        lgx:text-[18px] 
+                                        lg:text-[18px] 
+                                        md:text-[16px] 
+                                        sm:text-[16px]">Designer</span>
+                                </span>
+                            </span>
+                            <span class="flex items-center gap-[10px] sm:gap-[6px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                            </span>
+                        </div>
+                        <div class="w-full h-[1px] bg-line"></div>
+                        <div class="open-regular text-[25px] leading-[160%] text-darkgray 
+                        lgx:text-[22px] 
+                        lg:text-[20px] 
+                        md:text-[18px] 
+                        sm:text-[16px] sm:line-clamp-3">
+                            “Our team was able to teach themselves primchat in a day.it's like using a shared email
+                            inboxust way more robust
+                            looking.”Primchat was the modern what we were looking.
+                        </div>
+                    </div>
+                    <div class="rounded-[30px] bg-white flex flex-col gap-[30px] py-[70px] px-[105px] 
+                    xl:gap-[28px] xl:p-[60px] 
+                    lgx:gap-[25px] lgx:p-[40px] 
+                    lg:gap-[20px] lg:p-[30px] 
+                    md:gap-[20px] md:p-[25px] 
+                    sm:gap-[15px] sm:p-[18px] sm:h-fit">
+                        <div class="flex items-center justify-between column">
+                            <span class="flex items-center gap-[20px] sm:gap-[10px]">
+                                <a href="#" class="size-[94px] rounded-full overflow-hidden hover:ring-[2px] ring-electricblue transaction duration-500 
+                                    lgx:size-[84px] 
+                                    lg:size-[74px] 
+                                    md:size-[70px] 
+                                    sm:size-[60px]">
+                                    <img src="./img/joeCook.svg" alt="">
+                                </a>
+                                <span class="flex flex-col gap-[5px]">
+                                    <span class="block jost-medium text-[35px] leading-[100%] text-indigo 
+                                        lgx:text-[30px] 
+                                        lg:text-[26px] 
+                                        md:text-[24px] 
+                                        sm:text-[20px]">Joe Cook</span>
+                                    <span class="block open-regular text-[20px] leading-[160%] text-electricblue 
+                                        lgx:text-[18px] 
+                                        lg:text-[18px] 
+                                        md:text-[16px] 
+                                        sm:text-[16px]">Developer</span>
+                                </span>
+                            </span>
+                            <span class="flex items-center gap-[10px] sm:gap-[6px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                            </span>
+                        </div>
+                        <div class="w-full h-[1px] bg-line"></div>
+                        <div class="open-regular text-[25px] leading-[160%] text-darkgray 
+                        lgx:text-[22px] 
+                        lg:text-[20px] 
+                        md:text-[18px] 
+                        sm:text-[16px] sm:line-clamp-3">
+                            “Our team was able to teach themselves primchat in a day.it's like using a shared email
+                            inboxust way more robust
+                            looking.”Primchat was the modern what we were looking.
+                        </div>
+                    </div>
+                    <div class="rounded-[30px] bg-white flex flex-col gap-[30px] py-[70px] px-[105px] 
+                    xl:gap-[28px] xl:p-[60px] 
+                    lgx:gap-[25px] lgx:p-[40px] 
+                    lg:gap-[20px] lg:p-[30px] 
+                    md:gap-[20px] md:p-[25px] 
+                    sm:gap-[15px] sm:p-[18px] sm:h-fit">
+                        <div class="flex items-center justify-between column onlyThis">
+                            <span class="flex items-center gap-[20px] sm:gap-[10px]">
+                                <a href="#" class="size-[94px] rounded-full overflow-hidden hover:ring-[2px] ring-electricblue transaction duration-500 
+                                    lgx:size-[84px] 
+                                    lg:size-[74px] 
+                                    md:size-[70px] 
+                                    sm:size-[60px]">
+                                    <img src="./img/jessica.svg" alt="">
+                                </a>
+                                <span class="flex flex-col gap-[5px]">
+                                    <span class="block jost-medium text-[35px] leading-[100%] text-indigo 
+                                        lgx:text-[30px] 
+                                        lg:text-[26px] 
+                                        md:text-[24px] 
+                                        sm:text-[20px]">Jessica Jobs</span>
+                                    <span class="block open-regular text-[20px] leading-[160%] text-electricblue 
+                                        lgx:text-[18px] 
+                                        lg:text-[18px] 
+                                        md:text-[16px] 
+                                        sm:text-[16px]">Product Designer at Uber.INC</span>
+                                </span>
+                            </span>
+                            <span class="flex items-center gap-[10px] sm:gap-[6px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                                <img src="./img/star.svg" alt=""
+                                    class="lgx:size-[30px] lg:size-[24px] md:size-[22px] sm:size-[18px]">
+                            </span>
+                        </div>
+                        <div class="w-full h-[1px] bg-line"></div>
+                        <div class="open-regular text-[25px] leading-[160%] text-darkgray 
+                        lgx:text-[22px] 
+                        lg:text-[20px] 
+                        md:text-[18px] 
+                        sm:text-[16px] sm:line-clamp-3">
+                            “Our team was able to teach themselves primchat in a day.it's like using a shared email
+                            inboxust way more robust
+                            looking.”Primchat was the modern what we were looking.
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="mt-[100px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[30px] 
+            flex items-center justify-between 
+            lgx:flex-col lgx:gap-[20px] 
+            lg:flex-col lg:gap-[20px] 
+            md:flex-col md:gap-[15px] sm:flex-col">
+
+                <div class="py-[38px] px-[79px] rounded-[30px] bg-clightgray flex gap-[73px] items-center 
+                xl:gap-[60px] xl:py-[30px] xl:px-[60px] 
+                lgx:w-full lgx:py-[30px] lgx:px-[200px] lgx:gap-0 lgx:justify-between 
+                lg:w-full lg:py-[20px] lg:px-[150px] lg:gap-0 lg:justify-between 
+                md:w-full md:py-[20px] md:px-[120px] md:gap-0 md:justify-between 
+                sm:w-full sm:p-[20px] sm:gap-[15px] sm:flex-col">
+
+                    <a href="#" class="block">
+                        <img src="./img/best.svg" alt="">
+                    </a>
+                    <div class="sm:flex flex-col gap-[8px] hidden items-center">
+                        <span class="block jost-semibold text-[25px] leading-[115%]">
+                            4.5/5
+                        </span>
+                        <span class="flex items-center gap-[10px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                        </span>
+                        <span class="block open-semibold text-[16px] leading-[160%]">
+                            On the iOS App Store
+                        </span>
+                    </div>
+                    <a href="#" class="block">
+                        <img src="./img/spring.svg" alt="">
+                    </a>
+                    <div class="sm:flex flex-col gap-[8px] hidden items-center">
+                        <span class="block jost-semibold text-[25px] leading-[115%]">
+                            4.8/5
+                        </span>
+                        <span class="flex items-center gap-[10px]">
+                            <img src="./img/star.svg" alt="" class="xl:size-[40px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                            <img src="./img/star.svg" alt="" class="size-[20px]">
+                        </span>
+                        <span class="block open-semibold text-[16px] leading-[160%]">
+                            On the Android Play Store.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="flex items-center gap-[101px] text-oxfordblue 
+                xl:gap-[80px] 
+                lgx:w-full lgx:pl-[200px] lgx:pr-[80px] lgx:gap-0 lgx:justify-between 
+                lg:w-full lg:py-[20px] lg:pl-[160px] lg:pr-[50px] lg:gap-0 lg:justify-between 
+                md:w-full md:py-[20px] md:pl-[140px] md:pr-[30px] md:gap-0 md:justify-between sm:hidden">
+
+                    <div class="flex flex-col gap-[8px]">
+                        <span class="block jost-semibold text-[80px] leading-[115%] 
+                        xl:text-[60px] 
+                        lgx:text-[50px] 
+                        lg:text-[45px] 
+                        md:text-[35px]">
+                            4.5/5
+                        </span>
+                        <span class="flex items-center gap-[10px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                        </span>
+                        <span class="block open-semibold text-[25px] leading-[160%] 
+                        xl:text-[22px] 
+                        lgx:text-[20px] 
+                        lg:text-[20px] 
+                        md:text-[18px]">
+                            On the iOS App Store
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-[8px]">
+                        <span class="block jost-semibold text-[80px] leading-[115%] 
+                        xl:text-[60px] 
+                        lgx:text-[50px] 
+                        lg:text-[45px] 
+                        md:text-[35px]">
+                            4.8/5
+                        </span>
+                        <span class="flex items-center gap-[10px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                            <img src="./img/star.svg" alt=""
+                                class="xl:size-[40px] lgx:size-[30px] lg:size-[26px] md:size-[24px] sm:size-[20px]">
+                        </span>
+                        <span class="block open-semibold text-[25px] leading-[160%] 
+                        xl:text-[22px] 
+                        lgx:text-[20px] 
+                        lg:text-[20px] 
+                        md:text-[18px]">
+                            On the Android Play Store.
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section
+                class="mt-[150px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[30px] 
+            flex flex-col items-center gap-[43px] xl:gap-[30px] lgx:gap-[30px] lg:gap-[30px] md:gap-[25px] sm:gap-[20px]">
+
+                <div class="px-[326px] text-center jost-semibold text-[55px] leading-[100%] text-blackGray 
+                xl:text-[50px] xl:p-0 
+                lgx:text-[45px] lgx:p-0 
+                lg:text-[40px] lg:p-0 
+                md:text-[35px] md:p-0 
+                sm:text-[30px] sm:p-0">
+                    Feels great in low-light Mood for your
+                    <span class="text-oxfordblue">eye Protection</span>
+                </div>
+
+                <div
+                    class="grid grid-cols-3 items-center gap-[50px] mx-auto lgx:gap-[30px] lg:gap-[20px] md:gap-[15px] sm:gap-[15px] sm:grid-cols-1 sm:w-full sm:items-center">
+
+                    <span class="block sm:mx-auto">
+                        <img src="./img/signUp.svg" alt="">
+                    </span>
+                    <span class="block sm:mx-auto">
+                        <img src="./img/primePay.svg" alt="">
+                    </span>
+                    <span class="block sm:mx-auto">
+                        <img src="./img/code.svg" alt="">
+                    </span>
+
+                </div>
+
+                <div
+                    class="flex items-center gap-[599px] 
+                xl:gap-[500px] lgx:gap-[200px] lgx:gap-[80px] lg:gap-[50px] md:gap-[40px] sm:flex-col sm:gap-[20px] sm:items-start">
+                    <span
+                        class="block open-regular text-[20px] leading-[160%] text-darkgray lgx:text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px]">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        dolore magna aliqua.
+                    </span>
+                    <span
+                        class="flex rounded-[500px] border-[1px] border-border py-[6px] px-[7px] gap-[5px] items-center open-semibold text-lg leading-[160%]">
+                        <button class="py-[6.5px] px-[17px] text-cPurple rounded-[500px] border-[1px] border-peach hover:bg-peach hover:text-lightblack 
+                            transaction duration-300">
+                            Dark
+                        </button>
+                        <button class="py-[6.5px] px-[17px] text-cPurple rounded-[500px] border-[1px] border-peach hover:bg-peach hover:text-lightblack 
+                            transaction duration-300 active">
+                            Light
+                        </button>
+                    </span>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <!-- BLACK STATR -->
+    <div class="bg-cblack py-[132px] xl:py-[80px] lgx:py-[60px] lg:py-[40px] md:py-[30px] sm:py-[20px] 
+    mt-[90px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[30px]">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+
+            <section
+                class="grid grid-cols-[auto_718px] gap-[135px] items-center xl:gap-[20px] xl:grid-cols-[auto_680px] lgx:grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 lgx:gap-[20px] lg:gap-[20px] md:gap-[20px] sm:gap-[15px]">
+
+                <div
+                    class="flex flex-col gap-[26px] open-regular text-[20px] text-white lg:gap-[20px] md:gap-[20px] sm:gap-[15px] sm:text-[16px]">
+                    <h2
+                        class="jost-semibold text-[55px] leading-[100%] text-blackGray lg:text-[45px] md:text-[40px] sm:text-[28px]">
+                        Credit is the Fastest
+                        Mobile <span class="text-white">Banking Solution.</span>
+                    </h2>
+                    <div>
+                        <p class="leading-[160%]">
+                            Feels great in low-light Mood for your eye Protection
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <span class="grid grid-cols-2 justify-between leading-[249%] sm:text-[12px]">
+
+                            <span class="flex flex-col">
+                                <span class="flex items-center gap-[8px]">
+                                    <span class="size-[24px] rounded-full overflow-hidden sm:size-[16px]">
+                                        <img src="./img/miniCheck.svg" alt="">
+                                    </span>
+                                    <p>All your transaction</p>
+                                </span>
+                                <span class="flex items-center gap-[8px]">
+                                    <span class="size-[24px] rounded-full overflow-hidden sm:size-[16px]">
+                                        <img src="./img/miniCheck.svg" alt="">
+                                    </span>
+                                    <p>Receipts transaction</p>
+                                </span>
+                                <span class="flex items-center gap-[8px]">
+                                    <span class="size-[24px] rounded-full overflow-hidden sm:size-[16px]">
+                                        <img src="./img/miniCheck.svg" alt="">
+                                    </span>
+                                    <p>Experience Smart App</p>
+                                </span>
+                            </span>
+
+                            <span class="flex flex-col">
+                                <span class="flex items-center gap-[8px]">
+                                    <span class="size-[24px] rounded-full overflow-hidden sm:size-[16px]">
+                                        <img src="./img/miniCheck.svg" alt="">
+                                    </span>
+                                    <p>Control your Budget</p>
+                                </span>
+                                <span class="flex items-center gap-[8px]">
+                                    <span class="size-[24px] rounded-full overflow-hidden sm:size-[16px]">
+                                        <img src="./img/miniCheck.svg" alt="">
+                                    </span>
+                                    <p>Find your expenses</p>
+                                </span>
+                            </span>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="relative h-[485px] xl:h-[460px] sm:mx-[20px] sm:flex flex-col gap-[10px] sm:h-fit">
+                    <a href="#"
+                        class="absolute top-0 left-0 rounded-[40px] overflow-hidden hover:scale-[1.03] block hover:order-first lgx:m-[20px] lg:m-[20px] md:m-[20px] sm:static">
+                        <img src="./img/card-1.jpg" alt="">
+                    </a>
+                    <a href="#"
+                        class="absolute right-0 bottom-0 rounded-[40px] overflow-hidden block hover:scale-[1.03] lgx:m-[20px] lg:m-[20px] md:m-[20px] sm:static">
+                        <img src="./img/card-2.jpg" alt="">
+                    </a>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <!-- BLACK END -->
+    <!-- TEMPLATE START -->
+    <div class="">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px] lgx:px-5">
+
+            <!-- FIX TO SCROLL -->
+            <section
+                class="flex flex-col gap-[55px] items-center text-center xl:gap-[40px] lgx:gap-[30px] lg:gap-[25px] md:gap-[20px] sm:gap-[10px] mt-[150px] xl:mt-[80px] lgx:mt-[60px] lg:mt-[40px] md:mt-[30px] sm:mt-[20px]">
+
+                <div class="jost-semibold text-[55px] leading-[100%] text-lightGray px-[422px] xl:text-[50px] xl:px-0 
+                    lgx:text-[45px] lgx:px-[170px]
+                    lg:text-[45px] lg:px-[100px]
+                    md:text-[40px] md:px-[70px]
+                    sm:text-[30px] sm:px-[20px]">
+                    Our payment services
+                    <span class="text-oxfordblue">worldwide</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-[42px] xl:gap-[30px] w-full 
+                    xl:gap-[20px] xl:grid-cols-[1fr_1fr_1fr] xl:overflow-x-scroll xl:scroll-smooth xl:p-[15px] lg:snap-center
+                    lgx:gap-[20px] lgx:grid-cols-[1fr_1fr_1fr] lgx:overflow-x-scroll lgx:scroll-smooth lgx:p-[20px] lgx:snap-center
+                    lg:gap-[20px] lg:grid-cols-[1fr_1fr_1fr] lg:overflow-x-scroll lg:scroll-smooth lg:p-[15px] lg:snap-center
+                    md:gap-[15px] md:grid-cols-[1fr_1fr_1fr] md:overflow-x-scroll md:scroll-smooth md:p-[10px] md:snap-center
+                    sm:gap-[30px] sm:grid-cols-1 sm:px-[20px] unsetP">
+
+                    <div
+                        class="p-[44px] bg-clight rounded-[30px] flex flex-col gap-[25px] xl:p-[35px] lgx:p-[30px] lg:p-[30px] md:p-[30px] sm:p-[20px] sm:gap-[18px]">
+                        <span
+                            class="relative bg-peach rounded-[15px] jost-bold text-[50px] leading-[100%] text-oxfordblue py-[48px] pl-[35px] pr-[191px]">
+                            <p>Basic</p>
+                            <button
+                                class="absolute rounded-[10px] py-[13px] px-[21px] bg-cgreen jost-bold text-[22px] leading-[100%] text-oxfordblue -top-[24px] left-[35px] hover:bg-green-700 hover:text-white transition-bg duration-300 hidden sm:-top-[10px]">
+                                Popular
+                            </button>
+                            <span class="absolute top-[45px] right-0 chidden"><img src="./img/chechBasic.png"
+                                    alt=""></span>
+                        </span>
+                        <span class="flex items-center justify-between text-oxfordblue jost-medium leading-[100%]">
+                            <p class="text-[35px]">$10.00</p>
+                            <p class="text-[20px]">Month</p>
+                        </span>
+                        <span class="bg-white rounded-[15px] py-[8px] pl-[36px] pr-[74px]">
+                            <ul
+                                class="list-none flex flex-col items-start open-regular text-[20px] leading-[263%] text-darkgray sm:text-[16px] ctext">
+                                <li class="sm:line-clamp-1">Modern Design</li>
+                                <li class="sm:line-clamp-1">Easy to Customize</li>
+                                <li class="sm:line-clamp-1">Quickly Set Up A Website</li>
+                                <li class="sm:line-clamp-1">Another Feature</li>
+                                <li class="sm:line-clamp-1">24/7 Customer Support</li>
+                            </ul>
+                        </span>
+                        <button
+                            class="w-full py-[25px] bg-cgray rounded-full inter-semibold text-lg leading-[160%] text-white hover:bg-oxfordblue transition-bg duration-300 uppercase sm:py-[10px]">
+                            Get Started
+                        </button>
+                    </div>
+                    <div
+                        class="p-[44px] bg-clight rounded-[30px] flex flex-col gap-[25px] xl:p-[35px] lgx:p-[30px] lg:p-[30px] md:p-[30px] sm:p-[20px] sm:gap-[18px]">
+                        <span
+                            class="relative bg-ligtIndigo rounded-[15px] jost-bold text-[50px] leading-[100%] text-white py-[48px] pl-[35px] pr-[100px]">
+                            <p>Standard</p>
+                            <button
+                                class="absolute rounded-[10px] py-[13px] px-[21px] bg-cgreen jost-bold text-[22px] leading-[100%] text-oxfordblue -top-[24px] left-[35px] hover:bg-green-700 hover:text-white transition-bg duration-300 sm:-top-[10px]">
+                                Popular
+                            </button>
+                            <span class="absolute top-[9px] right-0 chidden"><img src="./img/check.png" alt=""></span>
+                        </span>
+                        <span class="flex items-center justify-between text-oxfordblue jost-medium leading-[100%]">
+                            <p class="text-[35px]">$19.00</p>
+                            <p class="text-[20px]">Month</p>
+                        </span>
+                        <span class="bg-white rounded-[15px] py-[8px] pl-[36px] pr-[74px]">
+                            <ul
+                                class="list-none flex flex-col items-start open-regular text-[20px] leading-[263%] text-darkgray sm:text-[16px] ctext">
+                                <li class="sm:line-clamp-1">Modern Design</li>
+                                <li class="sm:line-clamp-1">Easy to Customize</li>
+                                <li class="sm:line-clamp-1">Quickly Set Up A Website</li>
+                                <li class="sm:line-clamp-1">Another Feature</li>
+                                <li class="sm:line-clamp-1">24/7 Customer Support</li>
+                            </ul>
+                        </span>
+                        <button
+                            class="w-full py-[25px] bg-cgray rounded-full inter-semibold text-lg leading-[160%] text-white hover:bg-oxfordblue transition-bg duration-300 uppercase sm:py-[10px]">
+                            Get Started
+                        </button>
+                    </div>
+                    <div
+                        class="p-[44px] bg-clight rounded-[30px] flex flex-col gap-[25px] xl:p-[35px] lgx:p-[30px] lg:p-[30px] md:p-[30px] sm:p-[20px] sm:gap-[18px]">
+                        <span
+                            class="relative bg-peach rounded-[15px] jost-bold text-[50px] leading-[100%] text-oxfordblue py-[48px] pl-[35px] pr-[109px]">
+                            <p>Premium</p>
+                            <button
+                                class="absolute rounded-[10px] py-[13px] px-[21px] bg-cgreen jost-bold text-[22px] leading-[100%] text-oxfordblue -top-[24px] left-[35px] hover:bg-green-700 hover:text-white transition-bg duration-300 hidden sm:-top-[10px]">
+                                Popular
+                            </button>
+                            <span class="absolute top-[2px] right-0 chidden"><img src="./img/checkPremium.png"
+                                    alt=""></span>
+                        </span>
+                        <span class="flex items-center justify-between text-oxfordblue jost-medium leading-[100%]">
+                            <p class="text-[35px]">$35.00</p>
+                            <p class="text-[20px]">Month</p>
+                        </span>
+                        <span class="bg-white rounded-[15px] py-[8px] pl-[36px] pr-[74px]">
+                            <ul
+                                class="list-none flex flex-col items-start open-regular text-[20px] leading-[263%] text-darkgray sm:text-[16px] ctext">
+                                <li class="sm:line-clamp-1">Modern Design</li>
+                                <li class="sm:line-clamp-1">Easy to Customize</li>
+                                <li class="sm:line-clamp-1">Quickly Set Up A Website</li>
+                                <li class="sm:line-clamp-1">Another Feature</li>
+                                <li class="sm:line-clamp-1">24/7 Customer Support</li>
+                            </ul>
+                        </span>
+                        <button
+                            class="w-full py-[25px] bg-cgray rounded-full inter-semibold text-lg leading-[160%] text-white hover:bg-oxfordblue transition-bg duration-300 uppercase sm:py-[10px]">
+                            Get Started
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- FIX TO SCROLL -->
+
+        </div>
+    </div>
+    <!-- TEMPLATE END -->
+    <!-- FOOTER -->
+    <div
+        class="max-w-[1747px] max-h-[691px] rounded-[30px] bg-whisper mt-[300px] mx-auto xl:px-5 lg:px-[10px] md:px-[10px] sm:px-[10px] sm:max-h-fit sm:mt-[180px] xl:mt-[250px] lgx:mt-[200px] md:mt-[200px] lg:mt-[200px] lg:max-h-fit md:max-h-fit">
+        <div
+            class="ccontainer relative pt-[263px] pb-[107px] xl:pt-[80px] xl:pb-5 md:py-[50px] lg:pt-[150px] lg:pb-[50px] sm:pt-[70px] sm:pb-[20px] md:pt-[100px] md:pb-[50px] lg:px-5">
+            <div
+                class="absolute -top-[150px] right-0 left-0 py-[94px] px-[55px] bg-[url('./img/footer-bg.jpg')] bg-cover bg-no-repeat bg-center rounded-[30px] grid grid-cols-2 justify-between items-center xl:py-[60px] xl:px-[40px] md:p-[60px] sm:grid-cols-1 sm:p-5 sm:gap-[15px]">
+                <div
+                    class="jost-semibold text-[55px] leading-[101%] text-oxfordblue xl:text-[40px] lg:text-[30px] md:text-[25px] sm:text-lg">
+                    Take control of your personal
+                    <span class="text-white">finances today</span>
+                </div>
+                <form
+                    class="grid grid-cols-[1.5fr_1fr] gap-4 xl:items-center md:items-center sm:grid-cols-1 sm:gap-[15px] md:grid-cols-1 md:items-start">
+                    <input type="email" placeholder="Enter your email"
+                        class="py-5 px-[50px] bg-white rounded-[72px] outline-none xl:px-[30px] lg:px-[20px] md:p-[15px] sm:p-[10px] sm:pl-[20px]"
+                        required>
+                    <button type="submit"
+                        class="py-[25px] rounded-[72px] inter-semibold text-lg leading-[160%] text-white bg-oxfordblue hover:bg-peach transition-bg duration-300 xl:py-[15px] lg:px-[20px] lg:text-[16px md:p-[10px] md:text-[14px] sm:text-[12px] sm:p-[10px] sm:text-sm">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+            <div
+                class="grid grid-cols-[455px_1px_auto] items-start gap-[81px] lg:grid-cols-1 xl:grid-cols-1 xl:gap-5 md:grid-cols-1 md:gap-[15px] lg:gap-[15px] sm:grid-cols-1 sm:gap-[10px]">
+                <div
+                    class="flex flex-col gap-8 items-start xl:items-center xl:gap-[10px] md:gap-[10px] lg:gap-[10px] md:items-center lg:items-center sm:gap-[20px] sm:items-center sm:text-center">
+                    <a href="./index.html"
+                        class="flex items-center gap-2 jost-semibold text-[30px] leading-[129%] text-oxfordblue">
+                        <img src="./img/nav_logo.svg" alt="">
+                        PrimePay.
+                    </a>
+                    <div class="open-regular text-[20px] leading-[160%] text-darkgray xl:text-center md:text-center">
+                        Lorem ipsum dolor sitonsecteturadipisicing elit sed do eiusmod temporincididunt Laoreet non
+                        sagittis aliquam bibendum.
+                    </div>
+                    <div class="flex items-center gap-[27px] sm:gap-[10px]">
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/Insta.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/facebook.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/twitter.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/linkedin.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="h-[253px] border-[1px] border-lightgray xl:h-[1px] md:h-[1px] lg:h-[1px] sm:h-[1px]"></div>
+                <div
+                    class="flex gap-[108px] xl:justify-between md:items-start xl:gap-0 md:gap-0 md:justify-between sm:flex-col sm:gap-[10px] sm:items-center sm:text-center">
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Menu</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">About</a></li>
+                            <li><a href="./blogSingle.html" class="py-[3px] hover:text-peach">Features</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">Pricing
+                                    <span
+                                        class="open-semibold text-sm leading-[198%] text-white rounded-[15px] bg-lightgreen px-[10px]">
+                                        Offer
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a href="./blog.html" class="py-[3px] hover:text-peach">Blog</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">How it Work </a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Utility pages</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./styleguide.html" class="py-[3px] hover:text-peach">Style guide</a></li>
+                            <li><a href="./protected.html" class="py-[3px] hover:text-peach">Password protected</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">404 Not found</a></li>
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">Licenses</a></li>
+                            <li><a href="./changelog.html" class="py-[3px] hover:text-peach">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 flex-1 xl:gap-[10px] md:gap-[5px] sm:items-center">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Address</div>
+                        <form
+                            class="flex flex-col gap-[15px] open-regular text-[20px] leading-[198%] text-darkgray md:gap-5 sm:items-center">
+                            <div class="flex flex-col gap-10 xl:gap-[10px] md:gap-[5px] sm:items-center sm:gap-[10px]">
+                                <p class="sm:text-center">1700 W Blancke St, kiyev port south USA, America</p>
+                                <div class="flex flex-col ">
+                                    <a href="tel:+998998688078" type="tel" class="py-[3px] hover:text-peach">
+                                        +998 99 868 80 78
+                                    </a>
+                                    <a href="mailto: name@gmail.com" type="email" class="py-[3px] hover:text-peach">
+                                        mail@primpay.com
+                                    </a>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-electricblue rounded-[72px] py-[13px] px-[29px] inter-semibold text-lg leading-[160%] text-white hover:bg-peach/75 transition-bg duration-300 w-fit">
+                                Get A Quote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER END -->
+</body>
+
+</html>

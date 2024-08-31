@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleGuide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1400px', 'max': '2560px' },
+
+                    'xl': { 'min': '836px', 'max': '1440px' },
+
+                    'lgx': { 'min': '836px', 'max': '1024px' },
+
+                    'lg': { 'min': '768px', 'max': '836px' },
+
+                    'md': { 'min': '500px', 'max': '768px' },
+
+                    'sm': { 'min': '300px', 'max': '500px' },
+
+                },
+                extend: {
+                    colors: {
+                        oxfordblue: '#231656',
+                        whisper: '#F5F5F5',
+                        peach: '#FFC173 ',
+                        lightgray: '#C4C4C4',
+                        darkgray: '#4E4E4E',
+                        shadegray: '#F8F8F8',
+                        indigo: '#3D3269',
+                        electricblue: '#625FFB',
+                        lightgreen: '#2FCF3F',
+                        mediumpurple: '#8A6FFD',
+                        cgray: '#D7D7D7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px]">
+        <div class="flex justify-between items-center mt-10 xl:mt-5 md:mt-[10px]">
+            <a href="./index.html"
+                class="flex items-end gap-2 jost-regular text-[30px] leading-[130%] text-oxfordblue md:items-center lg:items-center">
+                <img src="./img/nav_logo.svg" alt="">
+                PrimePay.
+            </a>
+            <div class="flex gap-[197px] items-center xl:gap-[100px] lg:hidden md:hidden sm:hidden">
+                <div class="flex items-center gap-5 inter-bold text-lg leading-[160%] xl:text-[16px]">
+                    <a href="./licenses.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        About Us
+                    </a>
+                    <a href="./blogSingle.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Features
+                    </a>
+                    <a href="./n404.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Pricing
+                    </a>
+                    <a href="./blog.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Blog
+                    </a>
+                </div>
+                <button
+                    class="uppercase inter-regular leading-[160%] text-white py-5 px-[42px] bg-oxfordblue rounded-[72px] xl:py-[15px] xl:px-[30px] xl:text-[14px] hover:bg-peach transition-bg duration-300">login</button>
+            </div>
+            <div class="hidden lg:block md:block sm:block">
+                <button
+                    class="after:content-[''] after:w-[25px] after:h-[4px] after:bg-oxfordblue after:block after:rounded-[16px] 
+                before:content-[''] before:w-[25px] before:h-[4px] before:bg-oxfordblue before:block before:rounded-[16px] flex flex-col gap-[5px]">
+                    <span class="w-[25px] h-[4px] bg-peach rounded-[16px]"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- NAV END -->
+    <!-- HERO -->
+    <div
+        class="rounded-[32px] overflow-hidden bg-[url('./img/hero.jpg')] bg-contain bg-no-repeat bg-center mx-auto flex justify-center items-center mt-10 py-[154px] xl:py-[120px] lgx:py-[83px] lg:py-[67px] md:py-[66px] md:rounded-[16px] sm:py-[32px] sm:rounded-[8px]">
+        <div class="ccontainer flex justify-center items-center xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px]">
+            <h1
+                class="jost-regular text-[80px] leading-[100%] text-oxfordblue flex items-center gap-5 lgx:text-[60px] lg:text-[50px] md:text-[40px] sm:text-[30px]">
+                Style
+                <span class="text-white">Guide</span>
+            </h1>
+        </div>
+    </div>
+    <!-- HERO END -->
+    <!-- CONTENT -->
+    <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px]">
+        <div
+            class="mt-[144px] flex flex-col gap-[200px] jost-semibold leading-[100%] text-[40px] text-oxfordblue xl:mt-[100px] lgx:mt-[50px] lgx:text-[35px] lg:mt-[30px] lg:text-[30px] md:mt-[20px] sm:mt-[10px] sm:text-[18px] xl:gap-[100px] lgx:gap-[50px] lg:gap-[30px] md:gap-[20px] sm:gap-[10px]">
+            <div
+                class="flex items-start gap-[310px] lgx:gap-0 lgx:justify-between md:flex-col md:gap-[20px] md:items-center sm:flex-col sm:gap-[10px] sm:items-center">
+                <div>Color</div>
+                <div
+                    class="grid grid-cols-3 gap-10 xl:gap-[30px] lgx:gap-[20px] lg:gap-[10px] md:gap-0 md:justify-between md:w-full md:gap-[10px] sm:grid-cols-2 sm:gap-[10px] sm:justify-between sm:w-full">
+                    <a href="#" class="flex flex-col gap-[13px] items-center lgx:gap-2 sm:gap-[4px]">
+                        <span
+                            class="rounded-[30px] w-[237px] h-[225px] bg-oxfordblue lgx:size-[180px] lg:size-[170px] md:size-[160px] sm:size-[140px]"></span>
+                        <span class="flex flex-col items-center">
+                            <span
+                                class="text-[22px] leading-[130%] lgx:text-[18px] md:text-[14px] sm:text-[12px]">Primary
+                                Color</span>
+                            <span
+                                class="text-darkgray text-[20px] open-medium leading-[160%] lgx:text-[16px] md:text-[12px] sm:text-[10px]">231656</span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[13px] items-center lgx:gap-2 sm:gap-[4px]">
+                        <span
+                            class="rounded-[30px] w-[237px] h-[225px] bg-electricblue lgx:size-[180px] lg:size-[170px] md:size-[160px] sm:size-[140px]"></span>
+                        <span class="flex flex-col items-center">
+                            <span
+                                class="text-[22px] leading-[130%] lgx:text-[18px] md:text-[14px] sm:text-[12px]">Secondary
+                                Color</span>
+                            <span
+                                class="text-darkgray text-[20px] open-medium leading-[160%] lgx:text-[16px] md:text-[12px] sm:text-[10px]">625FFB</span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[13px] items-center lgx:gap-2 sm:gap-[4px]">
+                        <span
+                            class="rounded-[30px] w-[237px] h-[225px] bg-darkgray lgx:size-[180px] lg:size-[170px] md:size-[160px] sm:size-[140px]"></span>
+                        <span class="flex flex-col items-center">
+                            <span
+                                class="text-[22px] leading-[130%] lgx:text-[18px] md:text-[14px] sm:text-[12px]">Content
+                                Color</span>
+                            <span
+                                class="text-darkgray text-[20px] open-medium leading-[160%] lgx:text-[16px] md:text-[12px] sm:text-[10px]">4E4E4E</span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[13px] items-center lgx:gap-2 sm:gap-[4px]">
+                        <span
+                            class="rounded-[30px] w-[237px] h-[225px] bg-whisper lgx:size-[180px] lg:size-[170px] md:size-[160px] sm:size-[140px]"></span>
+                        <span class="flex flex-col items-center">
+                            <span
+                                class="text-[22px] leading-[130%] lgx:text-[18px] md:text-[14px] sm:text-[12px]">Background
+                                Color</span>
+                            <span
+                                class="text-darkgray text-[20px] open-medium leading-[160%] lgx:text-[16px] md:text-[12px] sm:text-[10px]">F5F5F5</span>
+                        </span>
+                    </a>
+                    <a href="#" class="flex flex-col gap-[13px] items-center lgx:gap-2 sm:gap-[4px]">
+                        <span
+                            class="rounded-[30px] w-[237px] h-[225px] bg-shadegray lgx:size-[180px] lg:size-[170px] md:size-[160px] sm:size-[140px]"></span>
+                        <span class="flex flex-col items-center">
+                            <span class="text-[22px] leading-[130%] lgx:text-[18px] md:text-[14px] sm:text-[12px]">Grey
+                                Background
+                                Color</span>
+                            <span
+                                class="text-darkgray text-[20px] open-medium leading-[160%] lgx:text-[16px] md:text-[12px] sm:text-[10px]">F8F8F8</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="flex items-start gap-[338px] lgx:gap-0 lgx:justify-between lg:gap-0 lg:justify-between md:flex-col md:items-center md:gap-[20px] sm:flex-col sm:gap-[10px] sm:items-start">
+                <div>Text</div>
+                <div
+                    class="flex flex-col gap-[50px] jost-bold leading-[130%] text-oxfordblue lgx:gap-[30px] lg:gap-[20px] md:gap-[20px] md:items-center sm:gap-[10px] sm:self-center">
+                    <h1 class="text-[70px] jost-extrabold lgx:text-[60px] lg:text-[50px] sm:text-[30px]">Heading H1
+                        Title</h1>
+                    <h2 class="text-[40px] lgx:text-[35px] lg:text-[30px] sm:text-[28px]">Heading H2 Title</h2>
+                    <h3 class="text-[35px] lgx:text-[30px] lg:text-[28px] sm:text-[25px]">Heading H3 Title</h3>
+                    <h4 class="text-[30px] lgx:text-[28px] lg:text-[25px] sm:text-[22px]">Heading H4 Title</h4>
+                    <h5 class="text-[28px] lgx:text-[25px] lg:text-[20px] sm:text-[19px]">Heading H5 Title</h5>
+                    <h6 class="text-[25px] lgx:text-[20px] lg:text-[18px] sm:text-[16px]">Heading H6 Title</h6>
+                </div>
+            </div>
+            <div class="flex items-start gap-[223px] lg:flex-col lg:gap-[20px] md:gap-[10px] sm:flex-col sm:gap-[10px]">
+                <div>Paragraph</div>
+                <p class="open-regular text-lg leading-[160%] text-darkgray sm:text-[14px] sm:line-clamp-2">
+                    Veniam quae. Nostrum facere repellendus minus quod aut aliquam neque reiciendis. Qui beatae vel
+                    magnam repudiandae ipsum
+                    repellat repudiandae. Voluptate at dolores ut dolor sint occaecati similique. Velit eius ab delectus
+                    temporibus.
+                </p>
+            </div>
+            <div
+                class="flex items-start gap-[350px] lgx:gap-[335px] lg:flex-col lg:gap-[20px] md:gap-[10px] sm:flex-col sm:gap-[10px]">
+                <div>List</div>
+                <div
+                    class="flex flex-col gap-10 open-regular text-lg leading-[290%] text-darkgray lg:gap-[20px] md:gap-[10px] sm:text-[12px] sm:gap-[10px]">
+                    <ul class="list-none">
+                        <li
+                            class="before:content-[''] before:block before:size-[5px] before:rounded-full before:bg-darkgray flex items-center gap-[10px]">
+                            Efficiently myocardinate market-driven innovation.</li>
+                        <li
+                            class="before:content-[''] before:block before:size-[5px] before:rounded-full before:bg-darkgray flex items-center gap-[10px]">
+                            Idea-sharing with back end products.</li>
+                        <li
+                            class="before:content-[''] before:block before:size-[5px] before:rounded-full before:bg-darkgray flex items-center gap-[10px]">
+                            Ballpark value added activity to beta test.</li>
+                        <li
+                            class="before:content-[''] before:block before:size-[5px] before:rounded-full before:bg-darkgray flex items-center gap-[10px]">
+                            Voluptate at dolores ut dolor</li>
+                    </ul>
+                    <ul class="list-none">
+                        <li class="before:content-['1.'] before:block flex items-center gap-[5px]">
+                            Efficiently myocardinate market-driven innovation.
+                        </li>
+                        <li class="before:content-['2.'] before:block flex items-center gap-[5px]">
+                            Idea-sharing with back end products.
+                        </li>
+                        <li class="before:content-['3.'] before:block flex items-center gap-[5px]">
+                            Ballpark value added activity to beta test.
+                        </li>
+                        <li class="before:content-['4.'] before:block flex items-center gap-[5px]">
+                            Voluptate at dolores ut dolor
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="flex items-start gap-[199px] lgx:flex-col lgx:gap-[20px] lg:flex-col lg:gap-[20px] md:flex-col md:gap-[20px] sm:flex-col sm:gap-[10px]">
+                <div>Blockquote</div>
+                <button
+                    class="py-[59px] px-[63px] bg-shadegray open-regular text-[25px] leading-[160%] text-darkgray border-l-[32px] border-mediumpurple lgx:py-[30px] lgx:w-full md:py-[20px] md:text-lg  lg:py-[20px] lg:text-lg sm:border-l-[16px] sm:p-[10px] sm:text-[14px] hover:bg-darkgray/25">
+                    “Our team was able to teach themselves primchat in a day.it's like using a shared email inboxust way
+                    more robust looking
+                    . Primchat was the modern what we were looking.”
+                </button>
+            </div>
+            <div
+                class="flex items-start gap-[293px] lg:gap-0 lg:justify-between lgx:gap-0 lgx:justify-between md:gap-[20px] md:flex-col sm:flex-col sm:gap-[10px]">
+                <div>Button</div>
+                <div class="flex flex-col gap-[23px] md:gap-[10px]">
+                    <div class="flex items-center gap-[30px] sm:grid sm:grid-cols-1">
+                        <button
+                            class="py-[25px] px-[70px] lg:py-[10px] md:py-[10px] md:px-[60px] rounded-[72px] bg-cgray inter-semibold text-lg leading-[160%] text-oxfordblue hover:bg-oxfordblue hover:text-white sm:py-[10px]">Default</button>
+                        <button
+                            class="py-[25px] px-[93px] lg:py-[10px] md:py-[10px] md:px-[60px] rounded-[72px] bg-cgray inter-semibold text-lg leading-[160%] text-oxfordblue hover:bg-oxfordblue hover:text-white sm:py-[10px]">Default</button>
+                    </div>
+                    <div class="flex items-center gap-[30px] sm:grid sm:grid-cols-1">
+                        <button
+                            class="py-[25px] px-[70px] lg:py-[10px] md:py-[10px] md:px-[60px] rounded-[72px] bg-cgray inter-semibold text-lg leading-[160%] text-oxfordblue hover:bg-oxfordblue hover:text-white sm:py-[10px]">Default</button>
+                        <button
+                            class="py-[25px] px-[110px] lg:py-[10px] md:py-[10px] md:px-[60px] rounded-[72px] bg-cgray inter-semibold text-lg leading-[160%] text-oxfordblue hover:bg-oxfordblue hover:text-white sm:py-[10px]">Default</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT END -->
+    <!-- FOOTER -->
+    <div
+        class="max-w-[1747px] max-h-[691px] rounded-[30px] bg-whisper mt-[300px] mx-auto xl:px-5 lg:px-[10px] md:px-[10px] sm:px-[10px] sm:max-h-fit sm:mt-[180px] xl:mt-[250px] lgx:mt-[200px] md:mt-[200px] lg:mt-[200px] lg:max-h-fit md:max-h-fit">
+        <div
+            class="ccontainer relative pt-[263px] pb-[107px] xl:pt-[80px] xl:pb-5 md:py-[50px] lg:pt-[150px] lg:pb-[50px] sm:pt-[70px] sm:pb-[20px] md:pt-[100px] md:pb-[50px] lg:px-5">
+            <div
+                class="absolute -top-[150px] right-0 left-0 py-[94px] px-[55px] bg-[url('./img/footer-bg.jpg')] bg-cover bg-no-repeat bg-center rounded-[30px] grid grid-cols-2 justify-between items-center xl:py-[60px] xl:px-[40px] md:p-[60px] sm:grid-cols-1 sm:p-5 sm:gap-[15px]">
+                <div
+                    class="jost-semibold text-[55px] leading-[101%] text-oxfordblue xl:text-[40px] lg:text-[30px] md:text-[25px] sm:text-lg">
+                    Take control of your personal
+                    <span class="text-white">finances today</span>
+                </div>
+                <form
+                    class="grid grid-cols-[1.5fr_1fr] gap-4 xl:items-center md:items-center sm:grid-cols-1 sm:gap-[15px] md:grid-cols-1 md:items-start">
+                    <input type="email" placeholder="Enter your email"
+                        class="py-5 px-[50px] bg-white rounded-[72px] outline-none xl:px-[30px] lg:px-[20px] md:p-[15px] sm:p-[10px] sm:pl-[20px]"
+                        required>
+                    <button type="submit"
+                        class="py-[25px] rounded-[72px] inter-semibold text-lg leading-[160%] text-white bg-oxfordblue hover:bg-peach transition-bg duration-300 xl:py-[15px] lg:px-[20px] lg:text-[16px md:p-[10px] md:text-[14px] sm:text-[12px] sm:p-[10px] sm:text-sm">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+            <div
+                class="grid grid-cols-[455px_1px_auto] items-start gap-[81px] lg:grid-cols-1 xl:grid-cols-1 xl:gap-5 md:grid-cols-1 md:gap-[15px] lg:gap-[15px] sm:grid-cols-1 sm:gap-[10px]">
+                <div
+                    class="flex flex-col gap-8 items-start xl:items-center xl:gap-[10px] md:gap-[10px] lg:gap-[10px] md:items-center lg:items-center sm:gap-[20px] sm:items-center sm:text-center">
+                    <a href="./index.html"
+                        class="flex items-center gap-2 jost-semibold text-[30px] leading-[129%] text-oxfordblue">
+                        <img src="./img/nav_logo.svg" alt="">
+                        PrimePay.
+                    </a>
+                    <div class="open-regular text-[20px] leading-[160%] text-darkgray xl:text-center md:text-center">
+                        Lorem ipsum dolor sitonsecteturadipisicing elit sed do eiusmod temporincididunt Laoreet non
+                        sagittis aliquam bibendum.
+                    </div>
+                    <div class="flex items-center gap-[27px] sm:gap-[10px]">
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/Insta.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/facebook.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/twitter.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/linkedin.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="h-[253px] border-[1px] border-lightgray xl:h-[1px] md:h-[1px] lg:h-[1px] sm:h-[1px]"></div>
+                <div
+                    class="flex gap-[108px] xl:justify-between md:items-start xl:gap-0 md:gap-0 md:justify-between sm:flex-col sm:gap-[10px] sm:items-center sm:text-center">
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Menu</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">About</a></li>
+                            <li><a href="./blogSingle.html" class="py-[3px] hover:text-peach">Features</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">Pricing
+                                    <span
+                                        class="open-semibold text-sm leading-[198%] text-white rounded-[15px] bg-lightgreen px-[10px]">
+                                        Offer
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a href="./blog.html" class="py-[3px] hover:text-peach">Blog</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">How it Work </a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Utility pages</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./styleguide.html" class="py-[3px] hover:text-peach">Style guide</a></li>
+                            <li><a href="./protected.html" class="py-[3px] hover:text-peach">Password protected</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">404 Not found</a></li>
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">Licenses</a></li>
+                            <li><a href="./changelog.html" class="py-[3px] hover:text-peach">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 flex-1 xl:gap-[10px] md:gap-[5px] sm:items-center">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Address</div>
+                        <form
+                            class="flex flex-col gap-[15px] open-regular text-[20px] leading-[198%] text-darkgray md:gap-5 sm:items-center">
+                            <div class="flex flex-col gap-10 xl:gap-[10px] md:gap-[5px] sm:items-center sm:gap-[10px]">
+                                <p class="sm:text-center">1700 W Blancke St, kiyev port south USA, America</p>
+                                <div class="flex flex-col ">
+                                    <a href="tel:+998998688078" type="tel" class="py-[3px] hover:text-peach">
+                                        +998 99 868 80 78
+                                    </a>
+                                    <a href="mailto: name@gmail.com" type="email" class="py-[3px] hover:text-peach">
+                                        mail@primpay.com
+                                    </a>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-electricblue rounded-[72px] py-[13px] px-[29px] inter-semibold text-lg leading-[160%] text-white hover:bg-peach/75 transition-bg duration-300 w-fit">
+                                Get A Quote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER END -->
+</body>
+
+</html>

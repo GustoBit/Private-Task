@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleGuide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1400px', 'max': '2560px' },
+
+                    'xl': { 'min': '836px', 'max': '1440px' },
+
+                    'lgx': { 'min': '836px', 'max': '1024px' },
+
+                    'lg': { 'min': '768px', 'max': '836px' },
+
+                    'md': { 'min': '500px', 'max': '768px' },
+
+                    'sm': { 'min': '300px', 'max': '500px' },
+
+                },
+                extend: {
+                    colors: {
+                        oxfordblue: '#231656',
+                        whisper: '#F5F5F5',
+                        peach: '#FFC173 ',
+                        lightgray: '#C4C4C4',
+                        darkgray: '#4E4E4E',
+                        shadegray: '#F8F8F8',
+                        indigo: '#3D3269',
+                        electricblue: '#625FFB',
+                        lightgreen: '#2FCF3F',
+                        mediumpurple: '#8A6FFD',
+                        cgray: '#D7D7D7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px]">
+        <div class="flex justify-between items-center mt-10 xl:mt-5 md:mt-[10px]">
+            <a href="./index.html"
+                class="flex items-end gap-2 jost-regular text-[30px] leading-[130%] text-oxfordblue md:items-center lg:items-center">
+                <img src="./img/nav_logo.svg" alt="">
+                PrimePay.
+            </a>
+            <div class="flex gap-[197px] items-center xl:gap-[100px] lg:hidden md:hidden sm:hidden">
+                <div class="flex items-center gap-5 inter-bold text-lg leading-[160%] xl:text-[16px]">
+                    <a href="./licenses.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        About Us
+                    </a>
+                    <a href="./blogSingle.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Features
+                    </a>
+                    <a href="./n404.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Pricing
+                    </a>
+                    <a href="./blog.html"
+                        class="text-oxfordblue rounded-[16px] block w-[100px] h-[60px] flex items-center justify-center hover:shadow-[0_0_7px_4px_rgba(245,245,245,0.3)] hover:bg-whisper">
+                        Blog
+                    </a>
+                </div>
+                <button
+                    class="uppercase inter-regular leading-[160%] text-white py-5 px-[42px] bg-oxfordblue rounded-[72px] xl:py-[15px] xl:px-[30px] xl:text-[14px] hover:bg-peach transition-bg duration-300">login</button>
+            </div>
+            <div class="hidden lg:block md:block sm:block">
+                <button
+                    class="after:content-[''] after:w-[25px] after:h-[4px] after:bg-oxfordblue after:block after:rounded-[16px] 
+                before:content-[''] before:w-[25px] before:h-[4px] before:bg-oxfordblue before:block before:rounded-[16px] flex flex-col gap-[5px]">
+                    <span class="w-[25px] h-[4px] bg-peach rounded-[16px]"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- NAV END -->
+    <!-- HERO -->
+    <div class="">
+        <div class="ccontainer xl:px-5 lg:px-5 md:px-[10px] sm:px-[10px]">
+
+            <section
+                class="flex items-center justify-center mt-[94px] xl:mt-[60px] lgx:mt-[50px] lgx:mt-[40px] lg:mt-[30px] md:mt-[30px] sm:mt-[20px]">
+                <div
+                    class="flex flex-col gap-[36px] text-oxfordblue items-center text-center px-[288px] xl:px-[200px] lgx:px-[100px] lg:px-[40px] md:px-[30px] sm:px-[10px] lgx:gap-[30px] lg:gap-[28px] md:gap-[25px] sm:gap-[20px]">
+                    <div class="lgx:w-[600px] lg:w-[560px] md:w-full sm:w-full"><img src="./img/404.svg" alt=""></div>
+                    <span class="space-y-[20px]">
+                        <h2
+                            class="jost-bold text-[75px] leading-[110%] lgx:text-[65px] lg:text-[45px] md:text-[35px] sm:text-[30px]">
+                            Oops! Page not found</h2>
+                        <p
+                            class="open-regular text-[25px] leading-[155%] text-darkgray lgx:text-[20px] lg:text-[18px] md:text-[18px] sm:text-[16px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis congue
+                            pretium faucibus leo nisl nulla pharetra nullam.
+                        </p>
+                    </span>
+                    <button
+                        class="text-white rounded-full py-[26px] px-[50px] bg-oxfordblue hover:bg-peach inter-semibold text-lg transition-bg duration-300 lgx:py-[20px] lgx:px-[40px] sm:py-[10px] sm:px-[30px] sm:text-[14px] lg:py-[15px] lg:px-[40px] lg:text-[16px] md:text-[16px] md:py-[15px] md:px-[40px]">
+                        Go to Homepage
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- HERO END -->
+    <!-- FOOTER -->
+    <div
+        class="max-w-[1747px] max-h-[691px] rounded-[30px] bg-whisper mt-[300px] mx-auto xl:px-5 lg:px-[10px] md:px-[10px] sm:px-[10px] sm:max-h-fit sm:mt-[180px] xl:mt-[250px] lgx:mt-[200px] md:mt-[200px] lg:mt-[200px] lg:max-h-fit md:max-h-fit">
+        <div
+            class="ccontainer relative pt-[263px] pb-[107px] xl:pt-[80px] xl:pb-5 md:py-[50px] lg:pt-[150px] lg:pb-[50px] sm:pt-[70px] sm:pb-[20px] md:pt-[100px] md:pb-[50px] lg:px-5">
+            <div
+                class="absolute -top-[150px] right-0 left-0 py-[94px] px-[55px] bg-[url('./img/footer-bg.jpg')] bg-cover bg-no-repeat bg-center rounded-[30px] grid grid-cols-2 justify-between items-center xl:py-[60px] xl:px-[40px] md:p-[60px] sm:grid-cols-1 sm:p-5 sm:gap-[15px]">
+                <div
+                    class="jost-semibold text-[55px] leading-[101%] text-oxfordblue xl:text-[40px] lg:text-[30px] md:text-[25px] sm:text-lg">
+                    Take control of your personal
+                    <span class="text-white">finances today</span>
+                </div>
+                <form
+                    class="grid grid-cols-[1.5fr_1fr] gap-4 xl:items-center md:items-center sm:grid-cols-1 sm:gap-[15px] md:grid-cols-1 md:items-start">
+                    <input type="email" placeholder="Enter your email"
+                        class="py-5 px-[50px] bg-white rounded-[72px] outline-none xl:px-[30px] lg:px-[20px] md:p-[15px] sm:p-[10px] sm:pl-[20px]"
+                        required>
+                    <button type="submit"
+                        class="py-[25px] rounded-[72px] inter-semibold text-lg leading-[160%] text-white bg-oxfordblue hover:bg-peach transition-bg duration-300 xl:py-[15px] lg:px-[20px] lg:text-[16px md:p-[10px] md:text-[14px] sm:text-[12px] sm:p-[10px] sm:text-sm">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+            <div
+                class="grid grid-cols-[455px_1px_auto] items-start gap-[81px] lg:grid-cols-1 xl:grid-cols-1 xl:gap-5 md:grid-cols-1 md:gap-[15px] lg:gap-[15px] sm:grid-cols-1 sm:gap-[10px]">
+                <div
+                    class="flex flex-col gap-8 items-start xl:items-center xl:gap-[10px] md:gap-[10px] lg:gap-[10px] md:items-center lg:items-center sm:gap-[20px] sm:items-center sm:text-center">
+                    <a href="./index.html"
+                        class="flex items-center gap-2 jost-semibold text-[30px] leading-[129%] text-oxfordblue">
+                        <img src="./img/nav_logo.svg" alt="">
+                        PrimePay.
+                    </a>
+                    <div class="open-regular text-[20px] leading-[160%] text-darkgray xl:text-center md:text-center">
+                        Lorem ipsum dolor sitonsecteturadipisicing elit sed do eiusmod temporincididunt Laoreet non
+                        sagittis aliquam bibendum.
+                    </div>
+                    <div class="flex items-center gap-[27px] sm:gap-[10px]">
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/Insta.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/facebook.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/twitter.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/linkedin.svg" alt=""></a>
+                        <a href="#"
+                            class="size-[50px] flex items-center justify-center rounded-xl hover:bg-peach transition-bg duration-300"><img
+                                src="./img/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="h-[253px] border-[1px] border-lightgray xl:h-[1px] md:h-[1px] lg:h-[1px] sm:h-[1px]"></div>
+                <div
+                    class="flex gap-[108px] xl:justify-between md:items-start xl:gap-0 md:gap-0 md:justify-between sm:flex-col sm:gap-[10px] sm:items-center sm:text-center">
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Menu</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">About</a></li>
+                            <li><a href="./blogSingle.html" class="py-[3px] hover:text-peach">Features</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">Pricing
+                                    <span
+                                        class="open-semibold text-sm leading-[198%] text-white rounded-[15px] bg-lightgreen px-[10px]">
+                                        Offer
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a href="./blog.html" class="py-[3px] hover:text-peach">Blog</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">How it Work </a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 xl:flex-1 xl:gap-[10px] md:flex-1 md:gap-[5px]">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Utility pages</div>
+                        <ul
+                            class="list-none flex flex-col gap-[5px] open-regular text-[20px] leading-[198%] text-darkgray">
+                            <li><a href="./styleguide.html" class="py-[3px] hover:text-peach">Style guide</a></li>
+                            <li><a href="./protected.html" class="py-[3px] hover:text-peach">Password protected</a></li>
+                            <li><a href="./n404.html" class="py-[3px] hover:text-peach">404 Not found</a></li>
+                            <li><a href="./licenses.html" class="py-[3px] hover:text-peach">Licenses</a></li>
+                            <li><a href="./changelog.html" class="py-[3px] hover:text-peach">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-5 flex-1 xl:gap-[10px] md:gap-[5px] sm:items-center">
+                        <div class="jost-medium text-[30px] leading-[101%] text-indigo">Address</div>
+                        <form
+                            class="flex flex-col gap-[15px] open-regular text-[20px] leading-[198%] text-darkgray md:gap-5 sm:items-center">
+                            <div class="flex flex-col gap-10 xl:gap-[10px] md:gap-[5px] sm:items-center sm:gap-[10px]">
+                                <p class="sm:text-center">1700 W Blancke St, kiyev port south USA, America</p>
+                                <div class="flex flex-col ">
+                                    <a href="tel:+998998688078" type="tel" class="py-[3px] hover:text-peach">
+                                        +998 99 868 80 78
+                                    </a>
+                                    <a href="mailto: name@gmail.com" type="email" class="py-[3px] hover:text-peach">
+                                        mail@primpay.com
+                                    </a>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-electricblue rounded-[72px] py-[13px] px-[29px] inter-semibold text-lg leading-[160%] text-white hover:bg-peach/75 transition-bg duration-300 w-fit">
+                                Get A Quote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER END -->
+</body>
+
+</html>
